@@ -48,7 +48,7 @@ export default function Editor_for_creatproblem(props) {
     function runcode_mode() {
         if( validate_code_is_not_empty() ){
             setRuning(true)
-            fetch(`http://10.201.30.27/pms/api/api/simple_compiler/python3`, {
+            fetch(`http://10.201.30.27/api/simple_compiler/python3`, {
                 'method': 'POST', 'body': JSON.stringify({
                 'student_code': readCode,
                 'input': isInput
@@ -76,7 +76,7 @@ export default function Editor_for_creatproblem(props) {
             const accept = (testcast_f('accept')!=undefined)? testcast_f('accept').split(',') : []
             const notaccept = (testcast_f('notaccept')!=undefined)? testcast_f('notaccept').split(',') : []
 
-            fetch(`http://10.201.30.27/pms/api/api/simple_compiler/python3`, {
+            fetch(`http://10.201.30.27/api/simple_compiler/python3`, {
                 'method': 'POST', 'body': JSON.stringify({
                 'student_code': readCode,
                 'fixanswer': fixanswer,
