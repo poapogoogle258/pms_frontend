@@ -54,7 +54,7 @@ export default function SearchCourse() {
                 dispatch({ type: 'CLEAN_QUERY' })
                 return
             }
-            fetch(`http://localhost:8080/api/plugin/search/${searchFrom}/${data.value}`,{
+            fetch(`http://10.201.30.27/pms/api/api/plugin/search/${searchFrom}/${data.value}`,{
                 credentials: "include"
             })
             .then(async (res) => {

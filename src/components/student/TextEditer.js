@@ -60,7 +60,7 @@ export default function TextEditer(props) {
     async function runcode_mode() {
         if( validate_code_is_not_empty() ){
             setRuning(true)
-            fetch(`http://localhost:8080/api/simple_compiler/python3`, {
+            fetch(`http://10.201.30.27/pms/api/api/simple_compiler/python3`, {
                 'method': 'POST', 'body': JSON.stringify({
                 'student_code': readCode,
                 'input': isInput
@@ -83,7 +83,7 @@ export default function TextEditer(props) {
     async function runtestcase_mode() {
         if( validate_code_is_not_empty() ){
             setRuning(true)
-            fetch(`http://localhost:8080/api/simple_compiler/python3`, {
+            fetch(`http://10.201.30.27/pms/api/api/simple_compiler/python3`, {
                 'method': 'POST', 'body': JSON.stringify({
                 'student_code': readCode,
                 'fixanswer': fixanswer,

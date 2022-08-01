@@ -177,7 +177,7 @@ export default function ScoreTaskDashboard(){
 
     async function onSubmit(data) {
         
-        const res = await fetch(`http://localhost:8080/api/plugin/extrapoint/${courses_id}/${task_id}`,{
+        const res = await fetch(`http://10.201.30.27/pms/api/api/plugin/extrapoint/${courses_id}/${task_id}`,{
             method : 'POST',
             credentials: 'include',
             body : JSON.stringify(data)

@@ -539,7 +539,7 @@ function ButtonExamination(pros) {
     } 
         
     useEffect(()=>{
-        fetch(`http://localhost:8080/api/plugin/examinations`, {'credentials': "include"})
+        fetch(`http://10.201.30.27/pms/api/api/plugin/examinations`, {'credentials': "include"})
         .then(async (res) => {
             res = await res.json()
             setExamples(res)

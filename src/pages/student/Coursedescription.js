@@ -11,7 +11,7 @@ export default function Coursedescription(pros) {
 
     
     const unregister = async () => {
-        const raw_data_unregister = await fetch(`http://localhost:8080/api/plugin/coursemember/${courses_id}`,
+        const raw_data_unregister = await fetch(`http://10.201.30.27/pms/api/api/plugin/coursemember/${courses_id}`,
             {'method' : 'DELETE', 'credentials': "include"}
         )
 
@@ -26,7 +26,7 @@ export default function Coursedescription(pros) {
 
     useEffect(() => {
         async function get_description() {
-            const raw_data_description = await fetch(`http://localhost:8080/api/plugin/registercourse/${courses_id}`,{'credentials': "include"})
+            const raw_data_description = await fetch(`http://10.201.30.27/pms/api/api/plugin/registercourse/${courses_id}`,{'credentials': "include"})
             const data_description = await raw_data_description.json() 
             
             setDetail({
