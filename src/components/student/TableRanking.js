@@ -8,7 +8,7 @@ export default function TableRanking(pros){
 
 
     useEffect(() => {
-        fetch(`http://10.201.30.27/pms/backend/api/plugin/ranking/${coursesid}/${taskid}/${problemid}`, {credentials: "include"})
+        fetch(`http://10.201.30.27/api/plugin/ranking/${coursesid}/${taskid}/${problemid}`, {credentials: "include"})
         .then(async (res) => {
             res = await res.json()
             setSubmission(res)

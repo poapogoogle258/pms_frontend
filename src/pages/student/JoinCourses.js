@@ -9,7 +9,7 @@ export default function JoinCourses() {
     const [detail,setDetail] = useState(null)
     const [isPasswordWrong,setPasswordWrong] = useState(false)
 
-    const register_course = (password) => fetch(`http://10.201.30.27/pms/backend/api/plugin/registercourse/${courseid}/${password}`,{'method' : 'POST', 'credentials': "include"})
+    const register_course = (password) => fetch(`http://10.201.30.27/api/plugin/registercourse/${courseid}/${password}`,{'method' : 'POST', 'credentials': "include"})
         .then(async (res) => {
             res = await res.json()
             if(res.status == 'success')
@@ -24,7 +24,7 @@ export default function JoinCourses() {
         if(password != undefined){
             register_course(password)
         }
-        fetch(`http://10.201.30.27/pms/backend/api/plugin/registercourse/${courseid}`,{'credentials': "include"})
+        fetch(`http://10.201.30.27/api/plugin/registercourse/${courseid}`,{'credentials': "include"})
         .then(async (res) => {
             res = await res.json()
             if(res.registed == true){
